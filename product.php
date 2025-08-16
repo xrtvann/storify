@@ -21,10 +21,18 @@ class Product
     }
 }
 
+class PrintProductInfo
+{
+    public static function printInfo(Product $product)
+    {
+        return $product->getProductInfo();
+    }
+}
+
 $product1 = new Product(92398298, "Air Mineral", 3000, 50);
-$product2 = new Product(92398299, "Coca Cola", 10000, 30);
-$product3 = new Product();
-echo $product1->getProductInfo();
-echo $product2->getProductInfo();
-echo $product3->getProductInfo();
+
+
+
+$printProduct1 = new PrintProductInfo();
+echo $printProduct1->printInfo($product1);
 ?>
