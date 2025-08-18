@@ -24,6 +24,10 @@ class User
         return $str;
     }
 
+    public function getAccess()
+    {
+        return "Limited access granted.";
+    }
 }
 
 ?>
