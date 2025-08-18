@@ -2,22 +2,20 @@
 
 class Product
 {
-    public $id;
-    public $name;
-    public $price;
-    public $stock;
+    protected $id, $name, $price, $stock, $category;
 
-    public function __construct($id = null, $name = null, $price = 0, $stock = 0)
+    public function __construct($id = null, $name = null, $price = 0, $stock = 0, $category = null)
     {
         $this->id = $id;
         $this->name = $name;
         $this->price = $price;
         $this->stock = $stock;
+        $this->category = $category;
     }
 
     public function getProductInfo()
     {
-        return "ID: $this->id, Name: $this->name, Price: $this->price, Stock: $this->stock";
+        return "ID: $this->id, Name: $this->name, Price: $this->price, Stock: $this->stock, Category: $this->category";
     }
 }
 

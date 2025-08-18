@@ -2,12 +2,7 @@
 
 class User
 {
-    public $id;
-    public $name;
-    public $username;
-    public $password;
-
-    public $role;
+    protected $id, $name, $username, $password, $role;
 
     public function __construct($id, $name, $username, $password, $role = 'customer')
     {
