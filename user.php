@@ -9,7 +9,7 @@ class User
 
     public $role;
 
-    public function __construct($id = null, $name = null, $username = null, $password = null, $role = 'user')
+    public function __construct($id = null, $name = null, $username = null, $password = null, $role = 'customer')
     {
         $this->id = $id;
         $this->name = $name;
