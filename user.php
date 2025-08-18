@@ -9,7 +9,7 @@ class User
 
     public $role;
 
-    public function __construct($id = null, $name = null, $username = null, $password = null, $role = 'customer')
+    public function __construct($id, $name, $username, $password, $role = 'customer')
     {
         $this->id = $id;
         $this->name = $name;
@@ -24,25 +24,6 @@ class User
         return $str;
     }
 
-    public function getAccess() {
-        if ($this->role === 'Admin') {
-            return "Full access granted.";
-        } else {
-            return "Limited access granted.";
-        }
-    }
 }
-
-$user1 = new User(1, "John Doe", "johndoe", "password123", "Admin");
-$user2 = new User(2, "Jane Smith", "janesmith", "password456");
-echo $user1->getUserInfo();
-echo "<br>";
-echo $user1->getAccess();
-echo "<br>";
-
-echo $user2->getUserInfo();
-echo "<br>";
-echo $user2->getAccess();
-echo "<br>";
 
 ?>
